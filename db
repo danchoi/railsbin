@@ -2,14 +2,14 @@
 
 # Use to pipe text selection in Vim to mysql. 
 
-# :.w ! pipedb dbname
+# :.w ! db dbname
 
 # or save db name in .pipedb in working dir and ...
 
-# :.w ! pipedb 
+# :.w ! db 
 
-if [[ -s .pipedb ]]; then
-  db=`cat .pipedb`
+if [[ -s .db ]]; then
+  db=`cat .db`
 else
   db=$1
 fi
