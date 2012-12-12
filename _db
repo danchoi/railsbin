@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Use to pipe text selection in Vim to mysql. 
+
+# :.w ! _db dbname
+
+# or save db name in ._db in working dir and ...
+
+# :.w ! _db 
+
+if [[ -s ._db ]]; then
+  db=`cat ._db`
+else
+  db=$1
+fi
+mysql -uroot $db -t
