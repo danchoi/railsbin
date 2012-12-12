@@ -4,7 +4,7 @@
 
 # :.w ! pipedb dbname
 
-or save db name in .pipedb in working dir and ...
+# or save db name in .pipedb in working dir and ...
 
 # :.w ! pipedb 
 
