@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# tails rails log; defaults to development.log
-tail -f log/${1:-development}.log
+# runs test 
+ruby -Ilib -Itest $1
