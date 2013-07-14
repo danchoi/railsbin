@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -e tmp/railsnull.pid ]
+then 
+  echo Killing pid
+  cat tmp/railsnull.pid
+  kill -9 $(cat tmp/railsnull.pid )
+fi

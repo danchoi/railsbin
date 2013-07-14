@@ -1,6 +1,11 @@
 #!/bin/bash
 
 
-bundle exec rails ${1:-s} 1>/dev/null 2>&1 &
+cmd="bundle exec rails ${1:-s} >/dev/null 2>&1 &"
+eval "$cmd"
+pid=$!
 
-echo "tail -f log/development.log to see log output"
+echo $pid > tmp/railsnull.pid
+echo "Starting $cmd with PID $pid. Kill with railskill"
+
+
