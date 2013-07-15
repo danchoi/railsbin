@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# tails log/development.log
+tail -f log/${1:-development}.log
